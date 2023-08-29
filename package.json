@@ -1,0 +1,71 @@
+{
+  "name": "ui-web-kit",
+  "private": false,
+  "main": "dist/ui-web-kit.umd.js",
+  "module": "dist/ui-web-kit.es.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "license": "MIT",
+  "prepublishOnly": "yarn build && yarn test",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-web-kit.es.js",
+      "require": "./dist/ui-web-kit.umd.js",
+      "default": "./dist/ui-web-kit.es.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValentynKvasnytskyi/ui-web-kit.git"
+  },
+  "keywords": [
+    "dropdown",
+    "ui",
+    "ui-components",
+    "components",
+    "typescript",
+    "javascript"
+  ],
+  "scripts": {
+    "build": "yarn clean && vite build && yarn types && yarn build:styles",
+    "build:styles": "sass src/:dist/ --style compressed --no-source-map",
+    "watch": "vite && yarn watch:styles",
+    "watch:styles": "sass --watch src/",
+    "clean": "rimraf dist",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "types": "tsc --emitDeclarationOnly"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build && yarn test"
+    }
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^9.3.1",
+    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.4",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.6.3",
+    "jest-environment-jsdom": "^29.6.4",
+    "prettier": "^3.0.2",
+    "rimraf": "^5.0.1",
+    "sass": "^1.66.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-style-import": "^2.0.0"
+  }
+}
