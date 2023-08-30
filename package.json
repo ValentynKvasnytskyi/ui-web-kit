@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "version": "1.0.3",
+  "author": "Valentyn Kvasnytskyi",
   "license": "MIT",
   "prepublishOnly": "yarn build && yarn test",
   "exports": {
@@ -24,6 +25,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ValentynKvasnytskyi/ui-web-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ValentynKvasnytskyi/ui-web-kit/issues"
   },
   "keywords": [
     "dropdown",
