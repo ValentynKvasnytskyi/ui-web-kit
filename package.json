@@ -5,7 +5,7 @@
   "module": "dist/ui-web-kit.es.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
   "prepublishOnly": "yarn build && yarn test",
   "exports": {
