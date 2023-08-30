@@ -13,7 +13,9 @@
       "import": "./dist/ui-web-kit.es.js",
       "require": "./dist/ui-web-kit.umd.js",
       "default": "./dist/ui-web-kit.es.js"
-    }
+    },
+    "./dist/Dropdown/styles/dropdown.css": "./dist/Dropdown/styles/dropdown.css",
+    "./src/Dropdown/styles/dropdown.scss": "./src/Dropdown/styles/dropdown.scss"
   },
   "files": [
     "dist/",
